@@ -1,2 +1,2 @@
-insert into CURRENCY_EXCHANGE(id,currency_from,currency_to,CONVERSION_MULTIPLE)  values(1,'INR','USD',70);
-insert into CURRENCY_EXCHANGE(id,currency_from,currency_to,CONVERSION_MULTIPLE)  values(2,'INR','AUD',86);
+insert into CURRENCY_EXCHANGE(id,currency_to,currency_from,CONVERSION_MULTIPLE)  values(1,'INR','USD',70);
+insert into CURRENCY_EXCHANGE(id,currency_to,currency_from,CONVERSION_MULTIPLE)  values(2,'INR','AUD',86);
