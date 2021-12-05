@@ -2,14 +2,28 @@ package com.demo.microservices.currencyexchangeservice.entity;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import org.springframework.stereotype.Component;
 
 @Component
+@Entity
 public class CurrencyExchange {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+
+	@Column(name = "currency_from")
 	private String from;
+
+	@Column(name = "currency_to")
 	private String to;
+
 	private BigDecimal conversionMultiple;
 	private String enviroment;
 
