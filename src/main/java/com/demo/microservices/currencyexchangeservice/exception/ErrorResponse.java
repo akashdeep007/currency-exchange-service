@@ -7,7 +7,7 @@ public class ErrorResponse {
 	private long timeStamp;
 
 	public ErrorResponse() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public ErrorResponse(int statusCode, String message, long timeStamp) {
