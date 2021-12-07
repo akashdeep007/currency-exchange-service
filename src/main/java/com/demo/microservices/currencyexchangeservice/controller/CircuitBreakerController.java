@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
 
 @RestController
@@ -13,7 +14,8 @@ public class CircuitBreakerController {
     private Logger logger = org.slf4j.LoggerFactory.getLogger(this.getClass());
 
     @GetMapping("/sample")
-    @Retry(name = "sampleRetry", fallbackMethod = "fallback")
+    // @Retry(name = "sampleRetry", fallbackMethod = "fallback")
+    @CircuitBreaker(name = "default", fallbackMethod = "fallback")
     public String sample() {
         // return "Hello World";
         logger.info("Inside sample method");
